@@ -14,7 +14,7 @@ const Server = axios.create({
 // 使用serve请求
 Server.interceptors.request.use(function(config){
 return config;
-},function(crrot){
+},function(error){
 return Promise.reject(error)
 })
 // 使用srever方法拦截器
@@ -23,3 +23,4 @@ Server.interceptors.response.use(function(response){
 },function(error){
     return Promise.reject(error)
 })
+export default Server
