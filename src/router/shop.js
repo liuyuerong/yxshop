@@ -7,7 +7,7 @@ const shop =[
 path:"/shop/register",
 name:"shop_register",
 component:Register,
-    }
+    },
 ]
 // 记得一定要抛出
 export default shop ;
