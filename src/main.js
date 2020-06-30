@@ -9,10 +9,18 @@ Vue.prototype.$axios=axios
 // 引入vant 
 import Vant from 'vant';
 import 'vant/lib/index.css';
-
+import "@/assets/style/reset.css";
 Vue.use(Vant);
 Vue.config.productionTip = false
-
+// 全局路由守卫，进入to组件之前
+router.beforeEach((to,from,next)=>{
+  // console.log(to)
+  // 判断路由是否设置
+ if(to.hasOwnProperty("meta")){
+   document.title=to.meta.title
+ }
+next()
+})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

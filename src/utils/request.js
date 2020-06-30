@@ -20,7 +20,7 @@ return Promise.reject(error)
 // 使用srever方法拦截器
 Server.interceptors.response.use(function(response){
     
-    if(response.status==200){
+    if(response.status == 200){
         return response.data
     }
     return response;
