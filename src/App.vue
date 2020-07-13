@@ -1,13 +1,18 @@
 <template>
   <div id="app">
-    <!-- <img src="./assets/logo.png"> -->
+   <Loding  v-show="this.$store.state.loding" > 
+  </Loding>
     <router-view/>
   </div>
 </template>
 
 <script>
+import Loding from "@/components/common/loding"
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+ Loding 
+  },
 }
 </script>
 

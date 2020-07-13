@@ -1,3 +1,4 @@
+ 
  const storage = {
 // 设置本地存贮.是否需要json
 set:function(key,value,isJson=false){
@@ -25,7 +26,6 @@ remove:function(key){
     }
     localStorage.removeItem(key)
 }
-// 删除
 }
 // 将他跑出去
 export default storage
