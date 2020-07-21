@@ -7,7 +7,7 @@
 <van-tabbar route active-color="red">
   <van-tabbar-item icon="home-o" to="/home">首页</van-tabbar-item>
   <van-tabbar-item icon="search" to="/fen">分类</van-tabbar-item>
-  <van-tabbar-item icon="friends-o" to="/cart">购物车</van-tabbar-item>
+  <van-tabbar-item icon="friends-o" to="/cart" :badge="this.$store.state.nums">购物车</van-tabbar-item>
   <van-tabbar-item icon="setting-o" to="/my">个人</van-tabbar-item>
 </van-tabbar>
     </div>

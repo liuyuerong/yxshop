@@ -87,7 +87,8 @@ if(res.code != 0){
             user.account = this.mobile;
             storage.set("yx_user",user,true);
 
-    this.$toast.success("用户登录成功")
+    this.$toast.success("用户登录成功");
+    this.$router.go(-1);//返回上个页面
         })
     }
   }
