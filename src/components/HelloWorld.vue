@@ -84,8 +84,17 @@
 </template>
 
 <script>
+import storage  from '@/utils/storage'
 export default {
   name: 'HelloWorld',
+  mounted() {
+    let string="heelleo storage";
+    let arr= [1,2,3,4,5]
+    // storage.set("yxshop",arr,true)
+    // console.log(storage.get("yxshop",true))
+    // 删除
+    storage.remove("yxshop")
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'

@@ -1,27 +1,20 @@
 <template>
   <div id="app">
-  
+   <Loding  v-show="this.$store.state.loding" > 
+  </Loding>
     <router-view/>
   </div>
 </template>
 
 <script>
-
+import Loding from "@/components/common/loding"
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+ Loding 
+  },
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  height: 100%;
-  /* margin-top: 60px; */
-  margin: 0;
-  
-}
 </style>
